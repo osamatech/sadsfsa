@@ -1,4 +1,4 @@
-var postTitle = new Array();     // array of posttitles
+   var postTitle = new Array();     // array of posttitles
    var postUrl = new Array();       // array of posturls
    var postDate = new Array();      // array of post publish dates
    var postSum = new Array();       // array of post summaries
@@ -164,7 +164,7 @@ function displayToc(filter) {
    var tocTable = '';
    var tocHead1 = 'POST TITLE';
    var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'تاريخ الموضوع';
+   var tocHead2 = 'POST DATE';
    var tocTool2 = 'Click to sort by date';
    var tocHead3 = 'LABELS';
    var tocTool3 = '';
@@ -213,7 +213,9 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
+      var tocNote = '<span class="toc-note">Displaying all ' + postTitle.length + ' posts<br/></span>'; }
    else {
+      var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
       tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
